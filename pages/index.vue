@@ -3,7 +3,7 @@
     <v-col cols="12" sm="8" md="6">
       <v-card>
         <v-card-title class="headline">
-          Woordle
+          Woordle ({{word}})
         </v-card-title>
         <v-card-text>
 
@@ -24,7 +24,7 @@ export default {
     word: '',
   }),
   fetch() {
-    // TODO: utilizzare il metodo getRandomWord per recuperare la parola corretta
+    this.word = getRandomWord()
   },
   methods: {
     handleGuess(guess) {

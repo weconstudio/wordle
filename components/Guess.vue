@@ -19,7 +19,10 @@ export default {
       type: String,
       required: true,
     },
-    // TODO aggiungere la prop word
+    word: {
+      type: String,
+      required: true,
+    },
   },
   computed: {
     characters() {
@@ -29,12 +32,14 @@ export default {
       return this.guess.split('')
     },
     states() {
-      // TODO ritornare uno stato per ogni carattere
-      // - STATE_MISSING se il carattere non è presente in this.word
-      // - STATE_PRESENT se il carattere è presente in this.word ma non è in posizione corretta
-      // - STATE_CORRECT se il carattere è presente in this.word ed è in posizione corretta
-
-      return [STATE_MISSING, STATE_MISSING, STATE_MISSING, STATE_MISSING, STATE_MISSING]
+      if(this.guess.length !== 5)
+        return [STATE_MISSING, STATE_MISSING, STATE_MISSING, STATE_MISSING, STATE_MISSING]
+        
+      return this.characters.map((char, i) => {
+        if(this.word[i] === char) return STATE_CORRECT
+        if(this.word.includes(char)) return STATE_PRESENT
+        return STATE_MISSING
+      })
     }
   }
 }

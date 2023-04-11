@@ -25,11 +25,15 @@ export default {
       type: String,
       required: true,
     },
-    // TODO aggiungere la prop state
+    state: {
+      type: String,
+      required: true,
+    },
   },
   computed: {
     color() {
-      // TODO ritornare colore in base allo stato 
+      if(this.state === STATE_CORRECT) return 'green'
+      if(this.state === STATE_PRESENT) return 'yellow darken-2'
       return undefined
     },
   },
