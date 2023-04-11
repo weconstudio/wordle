@@ -7,7 +7,7 @@
         </v-card-title>
         <v-card-text>
 
-          <div class="word">
+          <div class="guess">
             <Char v-for="(char,i) in characters" :key="i" :char="char" />
           </div>
           <Input @guess="handleGuess"/>
@@ -17,7 +17,7 @@
   </v-row>
 </template>
 <style lang="scss">
-.word {
+.guess {
   display: flex;
   gap: 10px;
 }
@@ -27,7 +27,7 @@
 
 export default {
   data: () => ({
-    
+    // TODO: adattare lo stato per il nuovo componente Guess.vue 
     characters: ['', '', '', '', ''],
   }),
   
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     handleGuess(guess) {
-      this.characters = guess.split('')
+      // TODO: passare "guess" come prop al nuovo componente Guess.vue 
     },
   }
 }

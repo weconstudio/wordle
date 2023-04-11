@@ -12,9 +12,13 @@ export default {
   computed: {
     characters() {
       // TODO: tornare l'array dei caratteri di this.guess
+      // TODO: se this.guess è vuoto, tornare un array di 5 stringhe vuote
 
       return ['a', 'b', 'c', 'd', 'e']
     },
   }
 }
 </script>
+
+<style lang="scss">
+</style>
