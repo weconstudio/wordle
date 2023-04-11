@@ -15,17 +15,22 @@ export default {
   }),
   methods: {
     validateGuess() {
-      // TODO validare la parola (this.guess)
-      // - controllare che la lunghezza sia di 5 lettere
-      // - controllare che la parola faccia parte del dizionario (words)
-      // - tornare true se entrambe le condizioni sono verificate false altrimenti
-      // TIP: se viene valorizzato this.error l'errore verrà mostrato nella text field
+      if(this.guess.length !== 5) {
+        this.error = 'La parola deve essere lunga 5 lettere'
+        return false
+      }
+
+      if(!words.includes(this.guess)) {
+        this.error = 'La parola non è valida'
+        return false
+      }
 
       return true
     },
     sendGuess() {
+      this.error = null
+      
       if(!this.validateGuess()) { return }
-
       this.$emit('guess', this.guess)
       this.guess = ''
     }
