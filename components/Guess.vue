@@ -1,6 +1,14 @@
 <template>
-  <!-- Usare il componente Char per mostrare i caratteri di guess (computed characters) -->
+  <div class="guess">
+    <Char v-for="(char,i) in characters" :key="i" :char="char" />
+  </div>
 </template>
+<style lang="scss">
+.guess {
+  display: flex;
+  gap: 10px;
+}
+</style>
 <script>
 export default {
   props: {
@@ -11,9 +19,10 @@ export default {
   },
   computed: {
     characters() {
-      // TODO: tornare l'array dei caratteri di this.guess
-
-      return ['a', 'b', 'c', 'd', 'e']
+      if(this.guess.length !== 5)
+        return ['', '', '', '', '']
+        
+      return this.guess.split('')
     },
   }
 }

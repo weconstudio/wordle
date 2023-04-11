@@ -7,28 +7,19 @@
         </v-card-title>
         <v-card-text>
 
-          <div class="word">
-            <Char v-for="(char,i) in characters" :key="i" :char="char" />
-          </div>
+          <Guess :guess="guess" />
           <Input @guess="handleGuess"/>
         </v-card-text>
       </v-card>
     </v-col>
   </v-row>
 </template>
-<style lang="scss">
-.word {
-  display: flex;
-  gap: 10px;
-}
-</style>
 
 <script>
 
 export default {
   data: () => ({
-    
-    characters: ['', '', '', '', ''],
+    guess: '',
   }),
   
   computed: {
@@ -36,7 +27,7 @@ export default {
   },
   methods: {
     handleGuess(guess) {
-      this.characters = guess.split('')
+      this.guess = guess
     },
   }
 }
