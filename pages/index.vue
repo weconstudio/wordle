@@ -9,12 +9,11 @@
           <div>
             <Guess class="mb-2" v-for="(guess, i) in board" :key="i" :guess="guess" :word="word"/>
           </div>
-          <Input v-if="!gameOver" @guess="handleGuess"  />
-          <div v-else-if="!win" class="headline mt-4">
-          La parola era  <b>{{word}}</b>. Hai perso!
-            
-          </div>
-          <v-btn v-if="gameOver" block class="mt-2" @click="reset">Gioca di nuovo</v-btn>
+          <Input @guess="handleGuess"  />
+          
+          <!-- TODO: mostrare la parola corretta in caso di sconfitta -->
+
+          <!-- TODO: aggiungere pulsante gioca di nuovo che usa il metodo reset visibile quando si è in gameOver  -->
         </v-card-text>
       </v-card>
     </v-col>
@@ -34,26 +33,20 @@ export default {
   },
   computed: {
     board() {
-      const empty = Array(6- this.guesses.length).fill('')
-      return [...this.guesses, ...empty]
-    },
-    reachedMaxGuesses() {
-      return this.guesses.length >= 6
-    },
-    win() {
-      return this.guesses.includes(this.word)
+      // TODO (opzionale) mostrare sempre la board completa con 6 righe
+      return this.guesses
     },
     gameOver() {
-      return this.guesses.includes(this.word) || this.guesses.length >= 6
+      // TODO tornare true quando il gioco è finito: il gioco finisce se indovini la parola o raggiungi 6 tentativi
+      return false
     },
   },
   methods: {
     handleGuess(guess) {
-      this.guesses.push(guess)
+      // TODO: aggiungere all'array di guesses il nuovo tentativo
     },
     reset() {
-      this.guesses = []
-      this.word = getRandomWord()
+      // TODO: implementare il reset del gioco
     },
   }
 }
