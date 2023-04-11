@@ -1,6 +1,6 @@
 <template>
   <div class="guess">
-    <Char v-for="(char,i) in characters" :key="i" :char="char" />
+    <Char v-for="(char,i) in characters" :key="i" :char="char" :state="states[i]"  />
   </div>
 </template>
 <style lang="scss">
@@ -10,12 +10,16 @@
 }
 </style>
 <script>
+
+import {STATE_MISSING, STATE_CORRECT, STATE_PRESENT} from '~/utils/words'
+
 export default {
   props: {
     guess: {
       type: String,
       required: true,
     },
+    // TODO aggiungere la prop word
   },
   computed: {
     characters() {
@@ -24,6 +28,14 @@ export default {
         
       return this.guess.split('')
     },
+    states() {
+      // TODO ritornare uno stato per ogni carattere
+      // - STATE_MISSING se il carattere non è presente in this.word
+      // - STATE_PRESENT se il carattere è presente in this.word ma non è in posizione corretta
+      // - STATE_CORRECT se il carattere è presente in this.word ed è in posizione corretta
+
+      return [STATE_MISSING, STATE_MISSING, STATE_MISSING, STATE_MISSING, STATE_MISSING]
+    }
   }
 }
 </script>

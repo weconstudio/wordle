@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="char">
+  <v-card outlined :color="color" class="char">
     <v-card-text class="text-center">
       <b class="text-xl">{{char}}</b>
     </v-card-text>
@@ -17,11 +17,20 @@
 }
 </style>
 <script>
+import { STATE_CORRECT, STATE_PRESENT} from '~/utils/words'
+
 export default {
   props: {
     char: {
       type: String,
       required: true,
+    },
+    // TODO aggiungere la prop state
+  },
+  computed: {
+    color() {
+      // TODO ritornare colore in base allo stato 
+      return undefined
     },
   },
 }

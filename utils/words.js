@@ -1,3 +1,7 @@
+export const STATE_CORRECT = 'correct'
+export const STATE_PRESENT = 'present'
+export const STATE_MISSING = 'missing'
+
 export const getRandomWord = () => {
   return words[Math.floor(Math.random() * words.length)]
 }

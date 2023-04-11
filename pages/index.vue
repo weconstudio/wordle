@@ -7,7 +7,7 @@
         </v-card-title>
         <v-card-text>
 
-          <Guess :guess="guess" />
+          <Guess :guess="guess" :word="word"/>
           <Input @guess="handleGuess"/>
         </v-card-text>
       </v-card>
@@ -16,14 +16,15 @@
 </template>
 
 <script>
+import { getRandomWord } from '~/utils/words';
 
 export default {
   data: () => ({
     guess: '',
+    word: '',
   }),
-  
-  computed: {
-    
+  fetch() {
+    // TODO: utilizzare il metodo getRandomWord per recuperare la parola corretta
   },
   methods: {
     handleGuess(guess) {
