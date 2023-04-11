@@ -1,6 +1,6 @@
 <template>
   <div class="mt-4">
-    <v-text-field filled hint="Inserisci una parola di 5 lettere" :error-messages="error ? [error] : []" persistent-hint autofocus v-model="guess"></v-text-field>
+    <v-text-field filled hint="Inserisci una parola di 5 lettere" :error-messages="error ? [error] : []" @keyup.enter="sendGuess" persistent-hint autofocus counter  v-model="guess"></v-text-field>
     <v-btn class="mt-2" color="primary" large block @click="sendGuess">Invia</v-btn>
   </div>
 </template>
@@ -29,7 +29,7 @@ export default {
     },
     sendGuess() {
       this.error = null
-      
+
       if(!this.validateGuess()) { return }
       this.$emit('guess', this.guess)
       this.guess = ''

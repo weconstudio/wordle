@@ -10,7 +10,8 @@
 .char{
   flex-grow: 1;
   font-size: 20px !important;
-  min-height: 60px;
+  height: 60px;
+  width: 60px;
 }
 .text-xl{
   font-size: 20px !important;
