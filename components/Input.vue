@@ -1,7 +1,18 @@
 <template>
   <div class="mt-4">
-    <v-text-field filled hint="Inserisci una parola di 5 lettere" :error-messages="error ? [error] : []" @keyup.enter="sendGuess" persistent-hint autofocus counter  v-model="guess"></v-text-field>
-    <v-btn class="mt-2" color="primary" large block @click="sendGuess">Invia</v-btn>
+    <v-text-field
+      filled
+      hint="Inserisci una parola di 5 lettere. Es: PESCA"
+      :error-messages="error ? [error] : []"
+      @keyup.enter="sendGuess"
+      persistent-hint
+      autofocus
+      counter
+      class="text-h6"
+      v-model="guess"
+      ref="guessField"
+    />
+    <v-btn class="mt-2" color="primary" x-large block @click="sendGuess">Invia</v-btn>
   </div>
 </template>
 <script>
@@ -16,12 +27,12 @@ export default {
   methods: {
     validateGuess() {
       if(this.guess.length !== 5) {
-        this.error = 'La parola deve essere lunga 5 lettere'
+        this.error = 'Inserisci una parola di 5 lettere.'
         return false
       }
 
-      if(!words.includes(this.guess)) {
-        this.error = 'La parola non è valida'
+      if(!words.includes(this.guess.toLowerCase())) {
+        this.error = 'La parola non è valida.'
         return false
       }
 
@@ -31,8 +42,10 @@ export default {
       this.error = null
 
       if(!this.validateGuess()) { return }
-      this.$emit('guess', this.guess)
+      this.$emit('guess', this.guess.toLowerCase())
+
       this.guess = ''
+      this.$refs.guessField.focus()
     }
   }
 }

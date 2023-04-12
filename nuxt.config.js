@@ -9,10 +9,10 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - wordle',
-    title: 'wordle',
+    titleTemplate: 'Wordle Vue',
+    title: 'Wordle Vue',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'it'
     },
     meta: [
       { charset: 'utf-8' },
@@ -50,7 +50,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,

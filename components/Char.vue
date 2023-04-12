@@ -1,7 +1,7 @@
 <template>
   <v-card outlined :color="color" class="char">
     <v-card-text class="text-center">
-      <b class="text-xl">{{char}}</b>
+      <span class="text-xl text-uppercase font-weight-black">{{char}}</span>
     </v-card-text>
   </v-card>
 </template>

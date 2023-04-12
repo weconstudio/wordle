@@ -8,14 +8,15 @@
     <v-footer
       absolute
       app
+      class="d-flex justify-center"
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>Made with ❤️ by WECONSTUDIO {{ new Date().getFullYear() }}</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>
