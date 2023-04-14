@@ -1,24 +1,18 @@
-# WORDLE
+# Workshop Vue.js: WORDLE
 
 ## Introduzione
 
-Il workshop prevede la realizzazione guidata di un piccolo gioco di nome Wordle in forma semplificata.
+Lo scopoo di questo repository è quello di contenere il material a supporto del workshop a tema Vue.js. È prevista la realizzazione guidata e semplificata di clone in lingua italiana del puzzle game Wordle (https://www.nytimes.com/games/wordle/index.html).
 
-Lo scopo del gioco è quello di indovinare una parola casuale di 5 caratteri.
+Lo scopo del gioco è quello di indovinare in 6 tentativi una parola di 5 caratteri estratta a caso dal dizionario. Per ogni tentativo sarà possibile utilizzare solo parole di senso compiuto e il gioco fornirà alcune indicazioni riguardanti l'esattezza delle lettere.
 
-## Modalità
+## Modalità di esecuzione del workshop
 
-Per seguire gli step del workshop basterà cambiare il branch quando chiesto.
+Per seguire lo svolgimento del workshop "sintonizzati" sul branch indicato quando richiesto.
 
-In ogni step ci sarà la soluzione dello step precedente.
+Ogni step (numerato da 1 a 5) contiene la soluzione di quello precedente.
 
-Questo l'elenco dei branch:
-- main
-- step-1
-- step-2
-- step-3
-- step-4
-- step-5
+Il branch main contiene una semplice dimostrazione della reattività di Vue.js.
 
 ## Avvio ambiente
 
