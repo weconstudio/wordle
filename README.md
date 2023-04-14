@@ -1,4 +1,4 @@
-# wordle
+# WORDLE
 
 ## Build Setup
 
