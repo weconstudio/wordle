@@ -6,10 +6,11 @@
           Wordle
         </v-card-title>
         <v-card-text>
-          <!-- TODO: sostituire con componente Guess -->
+          <!-- TODO: sostituire con un componente dedicato denominato Guess -->
           <div class="guess">
             <Char v-for="(char,i) in characters" :key="i" :char="char" />
           </div>
+          <!-- END TODO -->
           <Input @guess="handleGuess"/>
         </v-card-text>
       </v-card>
