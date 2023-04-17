@@ -6,17 +6,6 @@
   </v-card>
 </template>
 
-<style lang="scss">
-.char{
-  flex-grow: 1;
-  font-size: 20px !important;
-  height: 60px;
-  width: 60px;
-}
-.text-xl{
-  font-size: 20px !important;
-}
-</style>
 <script>
 import { STATE_CORRECT, STATE_PRESENT} from '~/utils/words'
 
@@ -40,3 +29,15 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.char{
+  flex-grow: 1;
+  font-size: 20px !important;
+  height: 60px;
+  width: 60px;
+}
+.text-xl{
+  font-size: 20px !important;
+}
+</style>
