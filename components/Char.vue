@@ -6,16 +6,6 @@
   </v-card>
 </template>
 
-<style lang="scss">
-.char{
-  flex-grow: 1;
-  font-size: 20px !important;
-  min-height: 60px;
-}
-.text-xl{
-  font-size: 20px !important;
-}
-</style>
 <script>
 export default {
   props: {
@@ -26,3 +16,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.char{
+  flex-grow: 1;
+  font-size: 20px !important;
+  min-height: 60px;
+}
+.text-xl{
+  font-size: 20px !important;
+}
+</style>

@@ -3,13 +3,17 @@
     <v-col cols="12" sm="8" md="6">
       <v-card>
         <v-card-title class="headline">
-          Wordle
+          Step 2
         </v-card-title>
+        <v-card-subtitle>
+          Lavoriamo con i componenti
+        </v-card-subtitle>
         <v-card-text>
-
+          <!-- TODO: sostituire con un componente dedicato denominato Guess -->
           <div class="guess">
             <Char v-for="(char,i) in characters" :key="i" :char="char" />
           </div>
+          <!-- END TODO -->
           <Input @guess="handleGuess"/>
         </v-card-text>
       </v-card>
@@ -27,16 +31,16 @@
 
 export default {
   data: () => ({
-    // TODO: adattare lo stato per il nuovo componente Guess.vue 
+    // TODO: adattare lo stato per il nuovo componente Guess.vue
     characters: ['', '', '', '', ''],
   }),
-  
+
   computed: {
-    
+
   },
   methods: {
     handleGuess(guess) {
-      // TODO: passare "guess" come prop al nuovo componente Guess.vue 
+      // TODO: passare "guess" come prop al nuovo componente Guess.vue
     },
   }
 }
