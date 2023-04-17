@@ -3,17 +3,18 @@
     <v-col cols="12" sm="8" md="6">
       <v-card>
         <v-card-title class="headline">
-          Wordle
+          Step 4
         </v-card-title>
+        <v-card-subtitle>{{ word }}</v-card-subtitle>
         <v-card-text>
           <div>
             <Guess class="mb-2" v-for="(guess, i) in board" :key="i" :guess="guess" :word="word"/>
           </div>
           <Input @guess="handleGuess"  />
-          
+
           <!-- TODO: mostrare la parola corretta in caso di sconfitta -->
 
-          <!-- TODO: aggiungere pulsante gioca di nuovo che usa il metodo reset visibile quando si è in gameOver  -->
+          <!-- TODO: aggiungere pulsante "Gioca di nuovo" che usa il metodo reset() visibile quando si verifica lo stato gameOver -->
         </v-card-text>
       </v-card>
     </v-col>
@@ -37,7 +38,7 @@ export default {
       return this.guesses
     },
     gameOver() {
-      // TODO tornare true quando il gioco è finito: il gioco finisce se indovini la parola o raggiungi 6 tentativi
+      // TODO restituire true quando il gioco è finito: il gioco finisce se indovini la parola o raggiungi 6 tentativi
       return false
     },
   },
