@@ -6,16 +6,6 @@
   </v-card>
 </template>
 
-<style lang="scss">
-.char{
-  flex-grow: 1;
-  font-size: 20px !important;
-  min-height: 60px;
-}
-.text-xl{
-  font-size: 20px !important;
-}
-</style>
 <script>
 import { STATE_CORRECT, STATE_PRESENT} from '~/utils/words'
 
@@ -29,9 +19,20 @@ export default {
   },
   computed: {
     color() {
-      // TODO ritornare colore in base allo stato 
+      // TODO restituire il colore in base allo stato
       return undefined
     },
   },
 }
 </script>
+
+<style lang="scss">
+.char{
+  flex-grow: 1;
+  font-size: 20px !important;
+  min-height: 60px;
+}
+.text-xl{
+  font-size: 20px !important;
+}
+</style>

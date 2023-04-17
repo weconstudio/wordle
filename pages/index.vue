@@ -24,7 +24,7 @@ export default {
     word: '',
   }),
   fetch() {
-    // TODO: utilizzare il metodo getRandomWord per recuperare la parola corretta
+    // TODO: utilizzare il metodo getRandomWord() per recuperare la parola corretta
   },
   methods: {
     handleGuess(guess) {

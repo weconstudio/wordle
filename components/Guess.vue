@@ -25,11 +25,11 @@ export default {
     characters() {
       if(this.guess.length !== 5)
         return ['', '', '', '', '']
-        
+
       return this.guess.split('')
     },
     states() {
-      // TODO ritornare uno stato per ogni carattere
+      // TODO restituire uno stato che descriva ciascun carattere
       // - STATE_MISSING se il carattere non è presente in this.word
       // - STATE_PRESENT se il carattere è presente in this.word ma non è in posizione corretta
       // - STATE_CORRECT se il carattere è presente in this.word ed è in posizione corretta
