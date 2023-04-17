@@ -67,7 +67,7 @@ $ git commit -a -m "le mie modifiche!"
 Se vuoi scartare le tue modifiche effettua la seguente operazione prima del checkout.
 
 ```bash
-$ git reset --hard"
+$ git reset --hard
 HEAD is now at 2089393 feat: README
 ```
 
