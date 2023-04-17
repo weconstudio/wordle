@@ -15,11 +15,12 @@ export default {
   }),
   methods: {
     validateGuess() {
-      // TODO validare la parola (this.guess)
-      // - controllare che la lunghezza sia di 5 lettere
+      // TODO validare la parola inserita (variabile this.guess)
+      // - controllare che la lunghezza sia di esattamente 5 lettere
       // - controllare che la parola faccia parte del dizionario (words)
-      // - tornare true se entrambe le condizioni sono verificate false altrimenti
-      // TIP: se viene valorizzato this.error l'errore verrà mostrato nella text field
+      // - restituire true se entrambe le condizioni sono verificate, false altrimenti
+
+      // TIP: valorizzando this.error con un messaggio di errore questo verrà mostrato nella text field
 
       return true
     },
