@@ -21,6 +21,13 @@ Il branch main contiene una semplice dimostrazione della reattività di Vue.js.
 ## Avvio ambiente
 
 Clona questo repository (o aggiornalo con `git pull` se lo hai clonato in precedenza) e, in base al package manager di cui disponi, segui i seguenti passi per iniziare a lavorare.
+```bash
+# clonazione del repository
+$ git clone https://github.com/weconstudio/wordle.git
+
+# apro la cartella del progetto con VSCode
+$ code wordle
+```
 
 ### yarn
 
