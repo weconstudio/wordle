@@ -5,12 +5,13 @@
         <v-card-title class="headline">
           Scrivi il tuo nome
         </v-card-title>
+
         <v-card-text>
           <v-text-field filled label="Nome" v-model="name"></v-text-field>
           <v-divider class="mb-4"></v-divider>
           <template v-if="name">
             <h1>CIAO {{ nameUppercase }}!</h1>
-            <v-btn class="mt-4" color="primary" @click="reset">Resetta</v-btn>
+            <v-btn class="mt-4" color="primary" @click="reset">Reset</v-btn>
           </template>
         </v-card-text>
       </v-card>
