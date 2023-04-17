@@ -5,7 +5,6 @@
         <v-card-title class="headline">
           Step 4
         </v-card-title>
-        <v-card-subtitle>{{ word }}</v-card-subtitle>
         <v-card-text>
           <div>
             <Guess class="mb-2" v-for="(guess, i) in board" :key="i" :guess="guess" :word="word"/>
