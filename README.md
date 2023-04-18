@@ -21,6 +21,13 @@ Il branch main contiene una semplice dimostrazione della reattività di Vue.js.
 ## Avvio ambiente
 
 Clona questo repository (o aggiornalo con `git pull` se lo hai clonato in precedenza) e, in base al package manager di cui disponi, segui i seguenti passi per iniziare a lavorare.
+```bash
+# clonazione del repository
+$ git clone https://github.com/weconstudio/wordle.git
+
+# apro la cartella del progetto con VSCode
+$ code wordle
+```
 
 ### yarn
 
@@ -124,3 +131,42 @@ Apportare le seguenti modifiche al codice
 ### step-5
 
 Passa a questo step per vedere la soluzione finale e divertiti a giocare con Wordle!
+
+## Handbook
+### Javascript
+
+```javascript
+// lunghezza di una stringa
+'ciao'.length // 4
+
+// accesso ad un carattere di una stringa
+'ciao'[0] // 'c'
+
+// split di una stringa
+'ciao'.split('') // ['c', 'i', 'a', 'o']
+
+// controllare se un carattere è presente in una stringa
+'ciao'.includes('c') // true
+'ciao'.includes('h') // false
+
+// array di stringhe
+const words = ['ciao', 'hello', 'bonjour']
+
+// controllare se un elemento è presente in un array
+words.includes('ciao') // true
+words.includes('hi!') // false
+
+// for vs map
+const numbers = [1, 2, 3, 4, 5]
+
+// for
+const doubledNumbers = []
+for (let i = 0; i < numbers.length; i++) {
+  doubledNumbers.push(numbers[i] * 2)
+}
+console.log(doubledNumbers) // [2, 4, 6, 8, 10]
+
+// map
+const doubledNumbers = numbers.map((number, i) => number * 2)
+console.log(doubledNumbers) // [2, 4, 6, 8, 10]
+```
