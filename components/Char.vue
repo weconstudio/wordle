@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     color() {
-      // TODO restituire il colore in base allo stato
+      // TODO restituire il colore in base allo stato (esempio di colori: 'warning', 'success')
       return undefined
     },
   },
