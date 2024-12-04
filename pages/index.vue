@@ -31,7 +31,7 @@
 
 export default {
   data: () => ({
-    // TODO: adattare lo stato per il nuovo componente Guess.vue
+    // TODO: sostituire la variabile di stato characters con una nuova variabile che sarà passata come prop per il componente Guess
     characters: ['', '', '', '', ''],
   }),
 
@@ -39,8 +39,8 @@ export default {
 
   },
   methods: {
-    handleGuess(guess) {
-      // TODO: passare "guess" come prop al nuovo componente Guess.vue
+    handleGuess(input) {
+      // TODO: impostare il valore della nuova variabile con il valore di input
     },
   }
 }
