@@ -12,12 +12,16 @@
       v-model="guess"
       ref="guessField"
     />
-    <v-btn class="mt-2" color="primary" x-large block @click="sendGuess">Invia</v-btn>
+    <div class="mt-2">
+      <v-btn color="primary" x-large block @click="sendGuess">Invia</v-btn>
+      <v-btn large text block @click="ai">Suggerimento</v-btn>
+
+  </div>
   </div>
 </template>
 <script>
 
-import { words } from '~/utils/words'
+import { words, getRandomWord } from '~/utils/words'
 
 export default {
   data: () => ({
@@ -46,7 +50,11 @@ export default {
 
       this.guess = ''
       this.$refs.guessField.focus()
-    }
+    },
+    ai() {
+      const g = getRandomWord()
+      this.$emit('guess', g.toLowerCase())
+    },
   }
 }
 </script>
